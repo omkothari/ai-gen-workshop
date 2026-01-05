@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Calendar, Clock, BookOpen, Brain } from "lucide-react";
+import { Calendar, Clock, BookOpen, Brain, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
@@ -29,6 +29,33 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center max-w-5xl mx-auto"
         >
+          {/* Partner Logos */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="flex items-center justify-center gap-8 mb-8"
+          >
+            {/* Logo 1 Placeholder */}
+            <div className="w-20 h-20 md:w-24 md:h-24 glass-card rounded-xl flex items-center justify-center p-3">
+              <div className="w-full h-full bg-muted/30 rounded-lg flex items-center justify-center text-xs text-muted-foreground">
+                Logo 1
+              </div>
+            </div>
+            {/* Logo 2 Placeholder */}
+            <div className="w-20 h-20 md:w-24 md:h-24 glass-card rounded-xl flex items-center justify-center p-3">
+              <div className="w-full h-full bg-muted/30 rounded-lg flex items-center justify-center text-xs text-muted-foreground">
+                Logo 2
+              </div>
+            </div>
+            {/* Logo 3 Placeholder */}
+            <div className="w-20 h-20 md:w-24 md:h-24 glass-card rounded-xl flex items-center justify-center p-3">
+              <div className="w-full h-full bg-muted/30 rounded-lg flex items-center justify-center text-xs text-muted-foreground">
+                Logo 3
+              </div>
+            </div>
+          </motion.div>
+
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -61,10 +88,23 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-10"
+            className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-6"
           >
             Foundations, Python Implementation, and Healthcare Applications
           </motion.p>
+
+          {/* Registration Deadline Banner */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.45 }}
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 border border-primary/30 mb-10"
+          >
+            <AlertCircle className="w-4 h-4 text-primary animate-pulse" />
+            <span className="text-sm font-semibold text-foreground">
+              Last Date of Registration: <span className="text-primary">20th February 2025</span>
+            </span>
+          </motion.div>
 
           {/* Stats Grid */}
           <motion.div
