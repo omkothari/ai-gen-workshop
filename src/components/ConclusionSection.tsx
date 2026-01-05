@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Rocket, ArrowRight, Mail, MapPin, Calendar } from "lucide-react";
+import { Rocket, ExternalLink, Mail, MapPin, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
+const REGISTRATION_LINK = "https://forms.gle/3aaYBVuKuBgTzHmS9";
 
 const ConclusionSection = () => {
   const ref = useRef(null);
@@ -58,8 +60,8 @@ const ConclusionSection = () => {
           >
             <div className="glass-card p-4 text-center">
               <Calendar className="w-5 h-5 text-primary mx-auto mb-2" />
-              <div className="text-sm font-medium">Duration</div>
-              <div className="text-xs text-muted-foreground">2 Days, 16 Hours</div>
+              <div className="text-sm font-medium">Workshop Dates</div>
+              <div className="text-xs text-muted-foreground">28 Feb – 1 Mar 2025</div>
             </div>
             <div className="glass-card p-4 text-center">
               <MapPin className="w-5 h-5 text-primary mx-auto mb-2" />
@@ -68,8 +70,8 @@ const ConclusionSection = () => {
             </div>
             <div className="glass-card p-4 text-center">
               <Mail className="w-5 h-5 text-primary mx-auto mb-2" />
-              <div className="text-sm font-medium">Contact</div>
-              <div className="text-xs text-muted-foreground">Workshop Committee</div>
+              <div className="text-sm font-medium">Registration Deadline</div>
+              <div className="text-xs text-muted-foreground">20th February 2025</div>
             </div>
           </motion.div>
 
@@ -83,9 +85,12 @@ const ConclusionSection = () => {
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-primary to-secondary text-primary-foreground hover:opacity-90 font-semibold px-8 py-6 text-lg group animate-pulse-glow"
+              asChild
             >
-              Register Now
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <a href={REGISTRATION_LINK} target="_blank" rel="noopener noreferrer">
+                Register Now
+                <ExternalLink className="ml-2 w-5 h-5" />
+              </a>
             </Button>
             <Button 
               size="lg" 

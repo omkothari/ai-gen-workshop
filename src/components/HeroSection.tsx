@@ -1,8 +1,43 @@
 import { motion } from "framer-motion";
-import { Calendar, Clock, BookOpen, Brain, AlertCircle } from "lucide-react";
+import { Calendar, Clock, BookOpen, Brain, AlertCircle, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react";
+
+const REGISTRATION_DEADLINE = new Date("2025-02-20T23:59:59");
+const WORKSHOP_START = "28th February 2025";
+const WORKSHOP_END = "1st March 2025";
+const REGISTRATION_LINK = "https://forms.gle/3aaYBVuKuBgTzHmS9";
 
 const HeroSection = () => {
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
+  useEffect(() => {
+    const calculateTimeLeft = () => {
+      const now = new Date();
+      const difference = REGISTRATION_DEADLINE.getTime() - now.getTime();
+
+      if (difference > 0) {
+        setTimeLeft({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / (1000 * 60)) % 60),
+          seconds: Math.floor((difference / 1000) % 60),
+        });
+      } else {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      }
+    };
+
+    calculateTimeLeft();
+    const timer = setInterval(calculateTimeLeft, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated background gradient */}
@@ -56,16 +91,16 @@ const HeroSection = () => {
             </div>
           </motion.div>
 
-          {/* Badge */}
+          {/* Badge with Workshop Dates */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8"
           >
-            <Brain className="w-4 h-4 text-primary" />
+            <Calendar className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-muted-foreground">
-              Two-Day Intensive Workshop
+              {WORKSHOP_START} – {WORKSHOP_END}
             </span>
           </motion.div>
 
@@ -93,17 +128,42 @@ const HeroSection = () => {
             Foundations, Python Implementation, and Healthcare Applications
           </motion.p>
 
-          {/* Registration Deadline Banner */}
+          {/* Registration Deadline with Countdown */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.45 }}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 border border-primary/30 mb-10"
+            className="mb-10"
           >
-            <AlertCircle className="w-4 h-4 text-primary animate-pulse" />
-            <span className="text-sm font-semibold text-foreground">
-              Last Date of Registration: <span className="text-primary">20th February 2025</span>
-            </span>
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 border border-primary/30 mb-4">
+              <AlertCircle className="w-4 h-4 text-primary animate-pulse" />
+              <span className="text-sm font-semibold text-foreground">
+                Registration Closes: <span className="text-primary">20th February 2025</span>
+              </span>
+            </div>
+
+            {/* Countdown Timer */}
+            <div className="flex items-center justify-center gap-3 sm:gap-4">
+              <div className="glass-card px-3 py-2 sm:px-4 sm:py-3 min-w-[60px] sm:min-w-[70px]">
+                <div className="text-xl sm:text-2xl font-bold font-display text-primary">{timeLeft.days}</div>
+                <div className="text-[10px] sm:text-xs text-muted-foreground uppercase tracking-wide">Days</div>
+              </div>
+              <span className="text-xl text-muted-foreground">:</span>
+              <div className="glass-card px-3 py-2 sm:px-4 sm:py-3 min-w-[60px] sm:min-w-[70px]">
+                <div className="text-xl sm:text-2xl font-bold font-display text-primary">{timeLeft.hours}</div>
+                <div className="text-[10px] sm:text-xs text-muted-foreground uppercase tracking-wide">Hours</div>
+              </div>
+              <span className="text-xl text-muted-foreground">:</span>
+              <div className="glass-card px-3 py-2 sm:px-4 sm:py-3 min-w-[60px] sm:min-w-[70px]">
+                <div className="text-xl sm:text-2xl font-bold font-display text-primary">{timeLeft.minutes}</div>
+                <div className="text-[10px] sm:text-xs text-muted-foreground uppercase tracking-wide">Mins</div>
+              </div>
+              <span className="text-xl text-muted-foreground">:</span>
+              <div className="glass-card px-3 py-2 sm:px-4 sm:py-3 min-w-[60px] sm:min-w-[70px]">
+                <div className="text-xl sm:text-2xl font-bold font-display text-primary">{timeLeft.seconds}</div>
+                <div className="text-[10px] sm:text-xs text-muted-foreground uppercase tracking-wide">Secs</div>
+              </div>
+            </div>
           </motion.div>
 
           {/* Stats Grid */}
@@ -144,18 +204,21 @@ const HeroSection = () => {
           >
             <Button 
               size="lg" 
-              className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-8 py-6 text-lg animate-pulse-glow"
-              onClick={() => document.getElementById('schedule')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-gradient-to-r from-primary to-secondary text-primary-foreground hover:opacity-90 font-semibold px-8 py-6 text-lg animate-pulse-glow"
+              asChild
             >
-              View Schedule
+              <a href={REGISTRATION_LINK} target="_blank" rel="noopener noreferrer">
+                Register Now
+                <ExternalLink className="ml-2 w-5 h-5" />
+              </a>
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
               className="border-primary/50 text-foreground hover:bg-primary/10 font-semibold px-8 py-6 text-lg"
-              onClick={() => document.getElementById('speakers')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById('schedule')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Meet the Speakers
+              View Schedule
             </Button>
           </motion.div>
         </motion.div>
