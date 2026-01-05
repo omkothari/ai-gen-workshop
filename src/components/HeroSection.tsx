@@ -3,9 +3,9 @@ import { Calendar, Clock, BookOpen, Brain, AlertCircle, ExternalLink } from "luc
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 
-const REGISTRATION_DEADLINE = new Date("2025-02-20T23:59:59");
-const WORKSHOP_START = "28th February 2025";
-const WORKSHOP_END = "1st March 2025";
+const REGISTRATION_DEADLINE = new Date("2026-02-20T23:59:59");
+const WORKSHOP_START = "28th February 2026";
+const WORKSHOP_END = "1st March 2026";
 const REGISTRATION_LINK = "https://forms.gle/3aaYBVuKuBgTzHmS9";
 
 const HeroSection = () => {
