@@ -58,7 +58,7 @@ const Navbar = () => {
                 <Brain className="w-6 h-6 text-primary-foreground" />
               </div>
               <span className="font-display font-bold text-lg hidden sm:block">
-                AI Karyashala
+                GenAI-Health Karyashala
               </span>
             </a>
 

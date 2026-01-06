@@ -12,7 +12,7 @@ const Footer = () => {
             </div>
             <div>
               <span className="font-display font-bold text-lg block">
-                AI Karyashala 2025
+                GenAI-Health Karyashala 2025
               </span>
               <span className="text-xs text-muted-foreground">
                 LLMs & Generative AI Workshop
@@ -37,7 +37,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 pt-6 border-t border-border/30 text-center text-xs text-muted-foreground">
-          © 2025 AI Karyashala. All rights reserved.
+          © 2025 GenAI-Health Karyashala. All rights reserved.
         </div>
       </div>
     </footer>

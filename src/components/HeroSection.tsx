@@ -96,22 +96,26 @@ const HeroSection = () => {
             className="flex items-center justify-center gap-8 mb-8"
           >
             {/* Logo 1 Placeholder */}
-            <div className="w-20 h-20 md:w-24 md:h-24 glass-card rounded-xl flex items-center justify-center p-3">
-              <div className="w-full h-full bg-muted/30 rounded-lg flex items-center justify-center text-xs text-muted-foreground">
+            <div className="w-20 h-20 md:w-24 md:h-24 glass-card rounded-xl flex items-center justify-center p-3 bg-white">
+              {/* <div className="w-full h-full bg-muted/30 rounded-lg flex items-center justify-center text-xs text-muted-foreground">
                 Logo 1
-              </div>
+              </div> */}
+                <img src="/iiitVadodara.png" className="h-full w-full object-contain" alt="" />
+
             </div>
             {/* Logo 2 Placeholder */}
-            <div className="w-20 h-20 md:w-24 md:h-24 glass-card rounded-xl flex items-center justify-center p-3">
-              <div className="w-full h-full bg-muted/30 rounded-lg flex items-center justify-center text-xs text-muted-foreground">
+            <div className="w-20 h-20 md:w-24 md:h-24 glass-card rounded-xl flex items-center justify-center p-3 bg-white">
+              {/* <div className="w-full h-full bg-muted/30 rounded-lg flex items-center justify-center text-xs text-muted-foreground">
                 Logo 2
-              </div>
+              </div> */}
+                <img src="/anrf.png" className="h-full w-full object-contain" alt="" />
+
             </div>
             {/* Logo 3 Placeholder */}
-            <div className="w-20 h-20 md:w-24 md:h-24 glass-card rounded-xl flex items-center justify-center p-3">
-              <div className="w-full h-full bg-muted/30 rounded-lg flex items-center justify-center text-xs text-muted-foreground">
-                Logo 3
-              </div>
+            <div className="w-20 h-20 md:w-24 md:h-24 glass-card rounded-xl flex items-center justify-center p-3 bg-white">
+              {/* <div className="w-full h-full bg-muted/30 rounded-lg flex items-center justify-center text-xs text-muted-foreground bg-white"> */}
+                <img src="/iitGandhinagar.png" className="h-full w-full object-contain" alt="" />
+              {/* </div> */}
             </div>
           </motion.div>
 

@@ -31,7 +31,7 @@ const VenueSection = () => {
             <span className="gradient-text">IIIT Vadodara</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Indian Institute of Information Technology, Vadodara - International Campus
+            Indian Institute of Information Technology, Vadodara - Gandhinagar Campus
           </p>
         </motion.div>
 
@@ -43,21 +43,22 @@ const VenueSection = () => {
           className="grid md:grid-cols-3 gap-6 mb-12"
         >
           {/* Main Venue Image */}
-          <div className="md:col-span-2 glass-card rounded-2xl overflow-hidden group">
+          <div className="md:col-span-3 glass-card rounded-2xl overflow-hidden group">
             <div className="aspect-video bg-muted/50 flex items-center justify-center relative">
-              <div className="text-center p-8">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+              <div className="text-center h-full w-full">
+                {/* <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
                   <MapPin className="w-8 h-8 text-primary" />
-                </div>
-                <p className="text-muted-foreground text-sm">Main Venue Image</p>
-                <p className="text-xs text-muted-foreground/60 mt-1">Upload your venue photo here</p>
+                </div> */}
+                {/* <p className="text-muted-foreground text-sm">Main Venue Image</p> */}
+                <img src="/venu.png" className="h-full w-full object-cover" alt="" />
+                {/* <p className="text-xs text-muted-foreground/60 mt-1">Upload your venue photo here</p> */}
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
           </div>
 
           {/* Side Images */}
-          <div className="flex flex-col gap-6">
+          {/* <div className="flex flex-col gap-6">
             <div className="flex-1 glass-card rounded-2xl overflow-hidden group">
               <div className="h-full min-h-[140px] bg-muted/50 flex items-center justify-center relative">
                 <div className="text-center p-4">
@@ -72,7 +73,7 @@ const VenueSection = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </motion.div>
 
         {/* Venue Info Cards */}

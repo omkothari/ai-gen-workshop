@@ -19,13 +19,13 @@ const patrons = [
     name: "Prof. D. Singh",
     title: "Director",
     affiliation: "IIIT Vadodara",
-    image: null,
+    image: "/organising/director.png",
   },
   {
     name: "Prof. R. Moona",
     title: "Director",
     affiliation: "IIT Gandhinagar",
-    image: null,
+    image: "/organising/rajatmoona.png",
   },
 ];
 
@@ -33,24 +33,24 @@ const convenor = {
   name: "Dr. J. S. Bhatt",
   title: "Dean RDP",
   affiliation: "IIIT Vadodara",
-  image: null,
+  image: "/organising/jignesh.png",
 };
 
 const coordinators = [
   {
     name: "Dr. Sanjay Saxena",
     affiliation: "IIIT Vadodara",
-    image: null,
+    image: "/organising/sanjay.png",
   },
   {
     name: "Dr. Pramit Mazumdar",
     affiliation: "IIIT Vadodara",
-    image: null,
+    image: "/organising/pramit.png",
   },
   {
     name: "Dr. Jignesh Patel",
     affiliation: "IIIT Vadodara",
-    image: null,
+    image: "/organising/jigneshpatel.png",
   },
 ];
 

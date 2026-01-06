@@ -92,14 +92,14 @@ const ConclusionSection = () => {
                 <ExternalLink className="ml-2 w-5 h-5" />
               </a>
             </Button>
-            <Button 
+            {/* <Button 
               size="lg" 
               variant="outline" 
               className="border-primary/50 text-foreground hover:bg-primary/10 font-semibold px-8 py-6 text-lg"
             >
               <Mail className="mr-2 w-5 h-5" />
               Contact Us
-            </Button>
+            </Button> */}
           </motion.div>
 
           {/* Decorative element */}

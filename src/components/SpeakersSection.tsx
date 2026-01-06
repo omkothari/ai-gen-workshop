@@ -12,74 +12,63 @@ const speakers = [
     name: "Dr. Sanjay Saxena",
     affiliation: "Indian Institute of Information Technology, Vadodara, India",
     isKeynote: false,
-    image: null, // Replace with: "/speakers/sanjay-saxena.jpg" or import
+    image: "/organising/sanjay.png", // Replace with: "/speakers/sanjay-saxena.jpg" or import
   },
   {
     name: "Dr. Jignesh S. Bhatt",
     affiliation: "Indian Institute of Information Technology, Vadodara, India",
     isKeynote: false,
-    image: null,
+    image: "/organising/jignesh.png",
   },
   {
     name: "Dr. Pramit Mazumdar",
     affiliation: "Indian Institute of Information Technology, Vadodara, India",
     isKeynote: false,
-    image: null,
+    image:"/organising/pramit.png"
   },
   {
-    name: "Prof. Christos Davatzikos",
-    affiliation: "University of Pennsylvania, USA",
+    name: "Dr. Dhiraj Bhatia",
+    affiliation: "Indian Institute of Technology, Gandhinagar, India",
     isKeynote: true,
-    image: null,
+    image: "/dhirajBhatia.png",
   },
   {
-    name: "Dr. Spyridon Bakas",
-    affiliation: "Indiana University, USA",
+    name: "Prof. Uttama Lahiri",
+    affiliation: "Indian Institute of Information Technology, Vadodara, India",
     isKeynote: true,
-    image: null,
+    image: "/prof-uttama.jpeg",
   },
   {
-    name: "Dr. Subhankar Mishra",
-    affiliation: "NISER Bhubaneswar, India",
+    name: "Dr. Jignesh Patel",
+    affiliation: "Indian Institute of Information Technology, Vadodara, India",
     isKeynote: false,
-    image: null,
+    image: "/organising/jigneshpatel.png",
   },
   {
     name: "Dr. Prateek Prasanna",
     affiliation: "Stony Brook University, USA",
     isKeynote: true,
-    image: null,
+    image: "/prateekprasanna.jpeg",
   },
+  
   {
-    name: "Dr. Sudip Paul",
-    affiliation: "NIT Raipur, India",
+    name: "Dr. Bhupendra Kumar",
+    affiliation: "Indian Institute of Information Technology, Vadodara, India",
     isKeynote: false,
-    image: null,
+    image: "/organising/bhupendra.png",
   },
-  {
-    name: "Dr. Pallab Bhattacharya",
-    affiliation: "NIPER Ahmedabad, India",
-    isKeynote: false,
-    image: null,
-  },
-  {
-    name: "Dr. Ujjawal Baid",
-    affiliation: "Emory University, USA",
-    isKeynote: false,
-    image: null,
-  },
-  {
-    name: "Dr. Hamed Akabari",
-    affiliation: "Santa Clara University, USA",
-    isKeynote: true,
-    image: null,
-  },
-  {
-    name: "Dr. Anahita Fathi Kazerooni",
-    affiliation: "University of Pennsylvania, USA",
-    isKeynote: true,
-    image: null,
-  },
+  // {
+  //   name: "Dr. Hamed Akabari",
+  //   affiliation: "Santa Clara University, USA",
+  //   isKeynote: true,
+  //   image: null,
+  // },
+  // {
+  //   name: "Dr. Anahita Fathi Kazerooni",
+  //   affiliation: "University of Pennsylvania, USA",
+  //   isKeynote: true,
+  //   image: null,
+  // },
 ];
 
 const keynoteSpeakers = speakers.filter(s => s.isKeynote);
@@ -174,7 +163,7 @@ const SpeakersSection = () => {
 
         {/* Regular Speakers */}
         <div>
-          <h3 className="font-display text-xl font-semibold text-center mb-8">Speakers & Lab Instructors</h3>
+          <h3 className="font-display text-xl font-semibold text-center mb-8">Resourse Person</h3>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
             {regularSpeakers.map((speaker, index) => (

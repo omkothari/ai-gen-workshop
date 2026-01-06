@@ -29,8 +29,8 @@ const Index = () => {
       <SpeakersSection />
       <OrganizingSection />
       <VenueSection />
-      <ContactSection />
       <ConclusionSection />
+      <ContactSection />
       <Footer />
     </div>
   );
