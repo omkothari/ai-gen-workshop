@@ -13,7 +13,6 @@ import OrganizingSection from "@/components/OrganizingSection";
 import VenueSection from "@/components/VenueSection";
 import ContactSection from "@/components/ContactSection";
 import ConclusionSection from "@/components/ConclusionSection";
-import ChiefGuestSection from "@/components/ChiefGuestSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
