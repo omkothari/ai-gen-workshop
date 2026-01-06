@@ -47,11 +47,11 @@ const coordinators = [
     affiliation: "IIIT Vadodara",
     image: "/organising/pramit.png",
   },
-  {
-    name: "Dr. Jignesh Patel",
-    affiliation: "IIIT Vadodara",
-    image: "/organising/jigneshpatel.png",
-  },
+  // {
+  //   name: "Dr. Jignesh Patel",
+  //   affiliation: "IIIT Vadodara",
+  //   image: "/organising/jigneshpatel.png",
+  // },
 ];
 
 interface MemberCardProps {

@@ -96,26 +96,41 @@ const HeroSection = () => {
             className="flex items-center justify-center gap-8 mb-8"
           >
             {/* Logo 1 Placeholder */}
-            <div className="w-20 h-20 md:w-24 md:h-24 glass-card rounded-xl flex items-center justify-center p-3 bg-white">
-              {/* <div className="w-full h-full bg-muted/30 rounded-lg flex items-center justify-center text-xs text-muted-foreground">
-                Logo 1
-              </div> */}
+            <div className="w-20 h-20 md:w-32 md:h-36 glass-card rounded-xl flex flex-col items-center justify-center p-3 ">
+              <div className="w-full h-full bg-muted/30 rounded-lg flex items-center justify-center text-xs text-muted-foreground">
+                {/* Logo 1 */}
                 <img src="/iiitVadodara.png" className="h-full w-full object-contain" alt="" />
+              </div>
+              <h2 className="text-xs mt-2">
+              IIIT Vadodara 
+
+              </h2>
 
             </div>
             {/* Logo 2 Placeholder */}
-            <div className="w-20 h-20 md:w-24 md:h-24 glass-card rounded-xl flex items-center justify-center p-3 bg-white">
-              {/* <div className="w-full h-full bg-muted/30 rounded-lg flex items-center justify-center text-xs text-muted-foreground">
-                Logo 2
-              </div> */}
-                <img src="/anrf.png" className="h-full w-full object-contain" alt="" />
+            <div className="w-20 h-20 md:w-32 md:h-36 glass-card rounded-xl flex flex-col items-center justify-center p-3 ">
+
+              <div className="w-full h-full bg-muted/30 rounded-lg flex items-center justify-center text-xs text-muted-foreground bg-white">
+
+              <img src="/anrf.png" className="h-full w-full object-contain" alt="" />
+              </div>
+              <h2 className="text-xs mt-2">
+              ANRF
+
+              </h2>
 
             </div>
             {/* Logo 3 Placeholder */}
-            <div className="w-20 h-20 md:w-24 md:h-24 glass-card rounded-xl flex items-center justify-center p-3 bg-white">
-              {/* <div className="w-full h-full bg-muted/30 rounded-lg flex items-center justify-center text-xs text-muted-foreground bg-white"> */}
+            <div className="w-20 h-20 md:w-32 md:h-36 glass-card rounded-xl flex flex-col items-center justify-center p-3 ">
+
+              <div className="w-full h-full bg-muted/30 rounded-lg flex items-center justify-center text-xs text-muted-foreground bg-white">
                 <img src="/iitGandhinagar.png" className="h-full w-full object-contain" alt="" />
-              {/* </div> */}
+              </div>
+              <h2 className="text-xs mt-2">
+              IIT Gandhinagar
+
+              </h2>
+
             </div>
           </motion.div>
 
@@ -124,13 +139,20 @@ const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 border border-primary/30 mb-6"
           >
             <Calendar className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-muted-foreground">
+            <span className="text-sm font-medium text-muted-foreground text-primary/90">
               {WORKSHOP_START} – {WORKSHOP_END}
             </span>
           </motion.div>
+
+          <motion.p  initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-6">
+            ANRF Sponsored
+          </motion.p>
 
           {/* Main Title */}
           <motion.h1
@@ -143,7 +165,7 @@ const HeroSection = () => {
             <br />
             <span className="gradient-text">Large Language Models</span>
             <br />
-            <span className="text-foreground">& Generative AI</span>
+            <span className="text-foreground">& Generative AI (Gen-AI Health)</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -153,7 +175,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-6"
           >
-            Foundations, Python Implementation, and Healthcare Applications
+            Foundations, Python Implementation, and Healthcare Applications 
           </motion.p>
 
           {/* Limited Seats + Registration Deadline */}
@@ -176,7 +198,7 @@ const HeroSection = () => {
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 border border-primary/30">
                 <AlertCircle className="w-4 h-4 text-primary animate-pulse" />
                 <span className="text-sm font-semibold text-foreground">
-                  Registration Closes: <span className="text-primary">20th February 2026</span>
+                  Registration Closes: <span className="text-red-500">20th February 2026</span>
                 </span>
               </div>
             </div>
@@ -229,7 +251,7 @@ const HeroSection = () => {
             </div>
             <div className="glass-card p-5 text-center group hover:border-primary/40 transition-all duration-300">
               <Brain className="w-6 h-6 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
-              <div className="text-3xl font-bold font-display gradient-text">6</div>
+              <div className="text-3xl font-bold font-display gradient-text">9</div>
               <div className="text-sm text-muted-foreground">Hands-on Hours</div>
             </div>
           </motion.div>

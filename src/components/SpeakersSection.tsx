@@ -8,12 +8,7 @@ import { Badge } from "@/components/ui/badge";
 // Example: import speakerImage from "@/assets/speakers/speaker-name.jpg";
 
 const speakers = [
-  {
-    name: "Dr. Sanjay Saxena",
-    affiliation: "Indian Institute of Information Technology, Vadodara, India",
-    isKeynote: false,
-    image: "/organising/sanjay.png", // Replace with: "/speakers/sanjay-saxena.jpg" or import
-  },
+  
   {
     name: "Dr. Jignesh S. Bhatt",
     affiliation: "Indian Institute of Information Technology, Vadodara, India",
@@ -21,10 +16,28 @@ const speakers = [
     image: "/organising/jignesh.png",
   },
   {
-    name: "Dr. Pramit Mazumdar",
+    name: "Dr. Sanjay Saxena",
     affiliation: "Indian Institute of Information Technology, Vadodara, India",
     isKeynote: false,
-    image:"/organising/pramit.png"
+    image: "/organising/sanjay.png", // Replace with: "/speakers/sanjay-saxena.jpg" or import
+  },
+  // {
+  //   name: "Dr. Pramit Mazumdar",
+  //   affiliation: "Indian Institute of Information Technology, Vadodara, India",
+  //   isKeynote: false,
+  //   image:"/organising/pramit.png"
+  // },
+   {
+    name: "Prof. Uttama Lahiri",
+    affiliation: "Indian Institute of Technology, Gandhinagar, India",
+    isKeynote: true,
+    image: "/prof-uttama.jpeg",
+  },
+  {
+    name: "Dr. Prateek Prasanna",
+    affiliation: "Stony Brook University, USA",
+    isKeynote: true,
+    image: "/prateekprasanna.jpeg",
   },
   {
     name: "Dr. Dhiraj Bhatia",
@@ -32,23 +45,12 @@ const speakers = [
     isKeynote: true,
     image: "/dhirajBhatia.png",
   },
-  {
-    name: "Prof. Uttama Lahiri",
-    affiliation: "Indian Institute of Information Technology, Vadodara, India",
-    isKeynote: true,
-    image: "/prof-uttama.jpeg",
-  },
+ 
   {
     name: "Dr. Jignesh Patel",
     affiliation: "Indian Institute of Information Technology, Vadodara, India",
     isKeynote: false,
     image: "/organising/jigneshpatel.png",
-  },
-  {
-    name: "Dr. Prateek Prasanna",
-    affiliation: "Stony Brook University, USA",
-    isKeynote: true,
-    image: "/prateekprasanna.jpeg",
   },
   
   {
