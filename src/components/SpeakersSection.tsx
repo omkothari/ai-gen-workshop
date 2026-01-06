@@ -1,69 +1,84 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Users, Star, MapPin, ExternalLink } from "lucide-react";
+import { Users, Star, MapPin } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+
+// Speaker images - replace these placeholders with actual image imports
+// Example: import speakerImage from "@/assets/speakers/speaker-name.jpg";
 
 const speakers = [
   {
     name: "Dr. Sanjay Saxena",
     affiliation: "Indian Institute of Information Technology, Vadodara, India",
     isKeynote: false,
+    image: null, // Replace with: "/speakers/sanjay-saxena.jpg" or import
   },
   {
     name: "Dr. Jignesh S. Bhatt",
     affiliation: "Indian Institute of Information Technology, Vadodara, India",
     isKeynote: false,
+    image: null,
   },
   {
     name: "Dr. Pramit Mazumdar",
     affiliation: "Indian Institute of Information Technology, Vadodara, India",
     isKeynote: false,
+    image: null,
   },
   {
     name: "Prof. Christos Davatzikos",
     affiliation: "University of Pennsylvania, USA",
     isKeynote: true,
+    image: null,
   },
   {
     name: "Dr. Spyridon Bakas",
     affiliation: "Indiana University, USA",
     isKeynote: true,
+    image: null,
   },
   {
     name: "Dr. Subhankar Mishra",
     affiliation: "NISER Bhubaneswar, India",
     isKeynote: false,
+    image: null,
   },
   {
     name: "Dr. Prateek Prasanna",
     affiliation: "Stony Brook University, USA",
     isKeynote: true,
+    image: null,
   },
   {
     name: "Dr. Sudip Paul",
     affiliation: "NIT Raipur, India",
     isKeynote: false,
+    image: null,
   },
   {
     name: "Dr. Pallab Bhattacharya",
     affiliation: "NIPER Ahmedabad, India",
     isKeynote: false,
+    image: null,
   },
   {
     name: "Dr. Ujjawal Baid",
     affiliation: "Emory University, USA",
     isKeynote: false,
+    image: null,
   },
   {
     name: "Dr. Hamed Akabari",
     affiliation: "Santa Clara University, USA",
     isKeynote: true,
+    image: null,
   },
   {
     name: "Dr. Anahita Fathi Kazerooni",
     affiliation: "University of Pennsylvania, USA",
     isKeynote: true,
+    image: null,
   },
 ];
 
@@ -129,11 +144,19 @@ const SpeakersSection = () => {
                   </Badge>
                 </div>
 
-                {/* Avatar placeholder */}
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-yellow-500/20 to-amber-500/20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  <span className="text-2xl font-bold text-yellow-500">
-                    {speaker.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
-                  </span>
+                {/* Avatar */}
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-yellow-500/20 to-amber-500/20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform overflow-hidden">
+                  {speaker.image ? (
+                    <img 
+                      src={speaker.image} 
+                      alt={speaker.name}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <span className="text-2xl font-bold text-yellow-500">
+                      {speaker.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
+                    </span>
+                  )}
                 </div>
 
                 <h4 className="font-display font-semibold text-lg text-center mb-2">
@@ -163,10 +186,18 @@ const SpeakersSection = () => {
                 className="glass-card p-4 group hover:border-primary/30 transition-all duration-300"
               >
                 {/* Avatar */}
-                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
-                  <span className="text-lg font-bold text-primary">
-                    {speaker.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
-                  </span>
+                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform overflow-hidden">
+                  {speaker.image ? (
+                    <img 
+                      src={speaker.image} 
+                      alt={speaker.name}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <span className="text-lg font-bold text-primary">
+                      {speaker.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
+                    </span>
+                  )}
                 </div>
 
                 <h4 className="font-semibold text-sm text-center mb-1">
