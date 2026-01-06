@@ -8,7 +8,9 @@ import ScheduleSection from "@/components/ScheduleSection";
 import PedagogySection from "@/components/PedagogySection";
 import ImpactSection from "@/components/ImpactSection";
 import SpeakersSection from "@/components/SpeakersSection";
+import OrganizingSection from "@/components/OrganizingSection";
 import VenueSection from "@/components/VenueSection";
+import ContactSection from "@/components/ContactSection";
 import ConclusionSection from "@/components/ConclusionSection";
 import Footer from "@/components/Footer";
 
@@ -25,7 +27,9 @@ const Index = () => {
       <PedagogySection />
       <ImpactSection />
       <SpeakersSection />
+      <OrganizingSection />
       <VenueSection />
+      <ContactSection />
       <ConclusionSection />
       <Footer />
     </div>
