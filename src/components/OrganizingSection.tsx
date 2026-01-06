@@ -6,14 +6,6 @@ import { Award, Users } from "lucide-react";
 // Committee member images - replace null with actual image imports
 // Example: import chiefGuestImage from "@/assets/committee/chief-guest.jpg";
 
-const chiefGuest = {
-  role: "Chief Guest",
-  name: "XXX",
-  title: "XXX",
-  affiliation: "XXX",
-  image: null,
-};
-
 const patrons = [
   {
     name: "Prof. D. Singh",
@@ -124,7 +116,7 @@ const OrganizingSection = () => {
           </h2>
         </motion.div>
 
-        {/* Top Row - Chief Guest, Patrons, Convenor */}
+        {/* Top Row - Patrons, Convenor */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -132,20 +124,6 @@ const OrganizingSection = () => {
           className="mb-16"
         >
           <div className="flex flex-wrap justify-center items-start gap-8 sm:gap-12 lg:gap-16">
-            {/* Chief Guest */}
-            <div className="flex flex-col items-center">
-              <div className="text-xs font-semibold text-yellow-500 uppercase tracking-wider mb-4 px-3 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/30">
-                Chief Guest
-              </div>
-              <MemberCard
-                name={chiefGuest.name}
-                title={chiefGuest.title}
-                affiliation={chiefGuest.affiliation}
-                image={chiefGuest.image}
-                size="large"
-              />
-            </div>
-
             {/* Patrons */}
             {patrons.map((patron, index) => (
               <div key={patron.name} className="flex flex-col items-center">
