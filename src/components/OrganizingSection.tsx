@@ -124,7 +124,7 @@ const OrganizingSection = () => {
           </h2>
         </motion.div>
 
-        {/* Top Row - Chief Guest, Patrons, Convenor */}
+        {/* Top Row - Patrons, Convenor */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
