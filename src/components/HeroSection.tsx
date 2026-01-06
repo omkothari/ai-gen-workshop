@@ -115,28 +115,17 @@ const HeroSection = () => {
             </div>
           </motion.div>
 
-          {/* Workshop Dates - Enhanced visibility */}
+          {/* Badge with Workshop Dates */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8"
           >
-            <div className="inline-flex flex-col sm:flex-row items-center gap-3 sm:gap-6 px-6 py-4 rounded-2xl glass-card border-2 border-primary/30 bg-gradient-to-r from-primary/10 to-accent/10">
-              <div className="flex items-center gap-2">
-                <Calendar className="w-6 h-6 text-primary" />
-                <span className="text-lg sm:text-xl font-bold font-display text-foreground">
-                  {WORKSHOP_START}
-                </span>
-              </div>
-              <div className="hidden sm:block w-8 h-0.5 bg-gradient-to-r from-primary to-accent rounded-full" />
-              <div className="sm:hidden w-0.5 h-4 bg-gradient-to-b from-primary to-accent rounded-full" />
-              <div className="flex items-center gap-2">
-                <span className="text-lg sm:text-xl font-bold font-display text-foreground">
-                  {WORKSHOP_END}
-                </span>
-              </div>
-            </div>
+            <Calendar className="w-4 h-4 text-primary" />
+            <span className="text-sm font-medium text-muted-foreground">
+              {WORKSHOP_START} – {WORKSHOP_END}
+            </span>
           </motion.div>
 
           {/* Main Title */}
