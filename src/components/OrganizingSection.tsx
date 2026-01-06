@@ -6,13 +6,13 @@ import { Award, Users } from "lucide-react";
 // Committee member images - replace null with actual image imports
 // Example: import chiefGuestImage from "@/assets/committee/chief-guest.jpg";
 
-const chiefGuest = {
-  role: "Chief Guest",
-  name: "XXX",
-  title: "XXX",
-  affiliation: "XXX",
-  image: null,
-};
+// const chiefGuest = {
+//   role: "Chief Guest",
+//   name: "XXX",
+//   title: "XXX",
+//   affiliation: "XXX",
+//   image: null,
+// };
 
 const patrons = [
   {
@@ -133,7 +133,7 @@ const OrganizingSection = () => {
         >
           <div className="flex flex-wrap justify-center items-start gap-8 sm:gap-12 lg:gap-16">
             {/* Chief Guest */}
-            <div className="flex flex-col items-center">
+            {/* <div className="flex flex-col items-center">
               <div className="text-xs font-semibold text-yellow-500 uppercase tracking-wider mb-4 px-3 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/30">
                 Chief Guest
               </div>
@@ -144,7 +144,7 @@ const OrganizingSection = () => {
                 image={chiefGuest.image}
                 size="large"
               />
-            </div>
+            </div> */}
 
             {/* Patrons */}
             {patrons.map((patron, index) => (
