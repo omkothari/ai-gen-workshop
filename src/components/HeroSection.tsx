@@ -93,30 +93,30 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="flex flex-wrap items-center justify-center gap-4 sm:gap-8 md:gap-12 mb-8"
+            className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 md:gap-12 mb-8"
           >
             {/* IIIT Vadodara */}
-            <div className="w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-40 glass-card rounded-xl flex flex-col items-center justify-center p-2 sm:p-3">
-              <div className="w-full flex-1 bg-muted/30 rounded-lg flex items-center justify-center overflow-hidden">
+            <div className="w-28 h-28 sm:w-28 sm:h-28 md:w-36 md:h-40 glass-card rounded-xl flex flex-col items-center justify-center p-3">
+              <div className="w-full flex-1 bg-white rounded-lg flex items-center justify-center overflow-hidden">
                 <img src="/iiitVadodara.png" className="h-full w-full object-contain p-1" alt="IIIT Vadodara" />
               </div>
-              <h2 className="text-[10px] sm:text-xs md:text-sm mt-1 sm:mt-2 font-medium text-foreground whitespace-nowrap">IIIT Vadodara</h2>
+              <h2 className="text-xs md:text-sm mt-2 font-medium text-foreground whitespace-nowrap">IIIT Vadodara</h2>
             </div>
 
             {/* ANRF */}
-            <div className="w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-40 glass-card rounded-xl flex flex-col items-center justify-center p-2 sm:p-3">
+            <div className="w-28 h-28 sm:w-28 sm:h-28 md:w-36 md:h-40 glass-card rounded-xl flex flex-col items-center justify-center p-3">
               <div className="w-full flex-1 bg-white rounded-lg flex items-center justify-center overflow-hidden">
                 <img src="/anrf.png" className="h-full w-full object-contain p-1" alt="ANRF" />
               </div>
-              <h2 className="text-[10px] sm:text-xs md:text-sm mt-1 sm:mt-2 font-medium text-foreground">ANRF</h2>
+              <h2 className="text-xs md:text-sm mt-2 font-medium text-foreground">ANRF</h2>
             </div>
 
             {/* IIT Gandhinagar */}
-            <div className="w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-40 glass-card rounded-xl flex flex-col items-center justify-center p-2 sm:p-3">
+            <div className="w-28 h-28 sm:w-28 sm:h-28 md:w-36 md:h-40 glass-card rounded-xl flex flex-col items-center justify-center p-3">
               <div className="w-full flex-1 bg-white rounded-lg flex items-center justify-center overflow-hidden">
                 <img src="/iitGandhinagar.png" className="h-full w-full object-contain p-1" alt="IIT Gandhinagar" />
               </div>
-              <h2 className="text-[10px] sm:text-xs md:text-sm mt-1 sm:mt-2 font-medium text-foreground whitespace-nowrap">IIT Gandhinagar</h2>
+              <h2 className="text-xs md:text-sm mt-2 font-medium text-foreground whitespace-nowrap">IIT Gandhinagar</h2>
             </div>
           </motion.div>
 
