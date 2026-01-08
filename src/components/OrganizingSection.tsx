@@ -105,6 +105,19 @@ const OrganizingSection = () => {
       <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
 
       <div className="section-container relative z-10" ref={ref}>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <Award className="w-6 h-6 text-primary" />
+            <span className="text-sm font-semibold text-primary uppercase tracking-wider">
+              Leadership
+            </span>
+          </div>
+        </motion.div>
 
         {/* Patrons */}
         <motion.div
