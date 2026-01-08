@@ -93,44 +93,30 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="flex items-center justify-center gap-8 mb-8"
+            className="flex items-center justify-center gap-6 sm:gap-10 md:gap-12 mb-8"
           >
-            {/* Logo 1 Placeholder */}
-            <div className="w-20 h-20 md:w-32 md:h-36 glass-card rounded-xl flex flex-col items-center justify-center p-3 ">
-              <div className="w-full h-full bg-muted/30 rounded-lg flex items-center justify-center text-xs text-muted-foreground">
-                {/* Logo 1 */}
-                <img src="/iiitVadodara.png" className="h-full w-full object-contain" alt="" />
+            {/* IIIT Vadodara */}
+            <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-44 glass-card rounded-xl flex flex-col items-center justify-center p-4">
+              <div className="w-full h-full bg-muted/30 rounded-lg flex items-center justify-center overflow-hidden">
+                <img src="/iiitVadodara.png" className="h-full w-full object-contain" alt="IIIT Vadodara" />
               </div>
-              <h2 className="text-xs mt-2">
-              IIIT Vadodara 
-
-              </h2>
-
+              <h2 className="text-xs sm:text-sm mt-2 font-medium text-foreground">IIIT Vadodara</h2>
             </div>
-            {/* Logo 2 Placeholder */}
-            <div className="w-20 h-20 md:w-32 md:h-36 glass-card rounded-xl flex flex-col items-center justify-center p-3 ">
 
-              <div className="w-full h-full bg-muted/30 rounded-lg flex items-center justify-center text-xs text-muted-foreground bg-white">
-
-              <img src="/anrf.png" className="h-full w-full object-contain" alt="" />
+            {/* ANRF */}
+            <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-44 glass-card rounded-xl flex flex-col items-center justify-center p-4">
+              <div className="w-full h-full bg-white rounded-lg flex items-center justify-center overflow-hidden">
+                <img src="/anrf.png" className="h-full w-full object-contain" alt="ANRF" />
               </div>
-              <h2 className="text-xs mt-2">
-              ANRF
-
-              </h2>
-
+              <h2 className="text-xs sm:text-sm mt-2 font-medium text-foreground">ANRF</h2>
             </div>
-            {/* Logo 3 Placeholder */}
-            <div className="w-20 h-20 md:w-32 md:h-36 glass-card rounded-xl flex flex-col items-center justify-center p-3 ">
 
-              <div className="w-full h-full bg-muted/30 rounded-lg flex items-center justify-center text-xs text-muted-foreground bg-white">
-                <img src="/iitGandhinagar.png" className="h-full w-full object-contain" alt="" />
+            {/* IIT Gandhinagar */}
+            <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-44 glass-card rounded-xl flex flex-col items-center justify-center p-4">
+              <div className="w-full h-full bg-white rounded-lg flex items-center justify-center overflow-hidden">
+                <img src="/iitGandhinagar.png" className="h-full w-full object-contain" alt="IIT Gandhinagar" />
               </div>
-              <h2 className="text-xs mt-2">
-              IIT Gandhinagar
-
-              </h2>
-
+              <h2 className="text-xs sm:text-sm mt-2 font-medium text-foreground">IIT Gandhinagar</h2>
             </div>
           </motion.div>
 
