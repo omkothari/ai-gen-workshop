@@ -227,7 +227,7 @@ const HeroSection = () => {
             </div>
             <div className="glass-card p-5 text-center group hover:border-primary/40 transition-all duration-300">
               <Clock className="w-6 h-6 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
-              <div className="text-3xl font-bold font-display gradient-text">16</div>
+              <div className="text-3xl font-bold font-display gradient-text">15</div>
               <div className="text-sm text-muted-foreground">Total Hours</div>
             </div>
             <div className="glass-card p-5 text-center group hover:border-primary/40 transition-all duration-300">
