@@ -55,7 +55,7 @@ const ContactSection = () => {
         </motion.div>
 
         {/* Contact Cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div className="flex justify-center gap-6 max-w-4xl mx-auto">
           {contacts.map((contact, index) => (
             <motion.a
               key={contact.email}
