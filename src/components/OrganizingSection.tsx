@@ -22,7 +22,7 @@ const patrons = [
     image: "/organising/director.png",
   },
   {
-    name: "Prof. R. Moona",
+    name: "Prof. Rajat Moona",
     title: "Director",
     affiliation: "IIT Gandhinagar",
     image: "/organising/rajatmoona.png",
@@ -31,7 +31,7 @@ const patrons = [
 
 const convenor = [{
   name: "Dr. Jignesh S. Bhatt",
-  title: "Dean RDP",
+  // title: "Dean RDP",
   affiliation: "IIIT Vadodara",
   image: "/organising/jignesh.png",
 },
@@ -163,7 +163,7 @@ const OrganizingSection = () => {
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 text-sm font-semibold text-accent uppercase tracking-wider px-4 py-2 rounded-full bg-accent/10 border border-accent/30">
               <Award className="w-4 h-4" />
-              Convenor
+              workshop chairs
             </div>
           </div>
 
