@@ -93,7 +93,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 md:gap-12 mb-8"
+            className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 md:gap-12 mb-8 grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3"
           >
             {/* IIIT Vadodara */}
             <div className="w-28 h-28 sm:w-28 sm:h-28 md:w-36 md:h-40 glass-card rounded-xl flex flex-col items-center justify-center p-3">
@@ -137,7 +137,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-6">
-            ANRF Sponsored
+            ANRF-PAIR Sponsored
           </motion.p>
 
           {/* Main Title */}
