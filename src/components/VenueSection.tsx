@@ -50,7 +50,7 @@ const VenueSection = () => {
                   <MapPin className="w-8 h-8 text-primary" />
                 </div> */}
                 {/* <p className="text-muted-foreground text-sm">Main Venue Image</p> */}
-                <img src="/venu.png" className="h-full w-full object-cover" alt="" />
+                <img src="/GANDHINAGAR.png" className="h-full w-full object-cover" alt="" />
                 {/* <p className="text-xs text-muted-foreground/60 mt-1">Upload your venue photo here</p> */}
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -87,7 +87,7 @@ const VenueSection = () => {
             <MapPin className="w-5 h-5 text-primary mx-auto mb-2" />
             <h4 className="font-semibold text-sm mb-1">Address</h4>
             <p className="text-xs text-muted-foreground">
-              IIIT Vadodara, Gandhinagar-Ahmedabad Road, Gujarat, India
+              C/o Block No.9 (IC Department), Government Engineering College, Sector 28 GIDC, Gandhinagar, Gujarat 382028
             </p>
           </div>
           <div className="glass-card p-5 text-center">

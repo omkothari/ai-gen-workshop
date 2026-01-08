@@ -16,7 +16,7 @@ import { Award, Users } from "lucide-react";
 
 const patrons = [
   {
-    name: "Prof. D. Singh",
+    name: "Prof. Dharmendra Singh",
     title: "Director",
     affiliation: "IIIT Vadodara",
     image: "/organising/director.png",
@@ -29,12 +29,18 @@ const patrons = [
   },
 ];
 
-const convenor = {
-  name: "Dr. J. S. Bhatt",
+const convenor = [{
+  name: "Dr. Jignesh S. Bhatt",
   title: "Dean RDP",
   affiliation: "IIIT Vadodara",
   image: "/organising/jignesh.png",
-};
+},
+{
+  name: "Dr. Dhiraj Bhatia",
+  // title: "Dean RDP",
+  affiliation: "IIT Gandhinagar",
+  image: "/dhirajBhatia.png",
+}];
 
 const coordinators = [
   {
@@ -104,9 +110,8 @@ const OrganizingSection = () => {
       <div className="absolute top-1/4 left-0 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
 
-      <div className="section-container relative z-10">
+      <div className="section-container relative z-10" ref={ref}>
         <motion.div
-          ref={ref}
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
           transition={{ duration: 0.8 }}
@@ -118,63 +123,61 @@ const OrganizingSection = () => {
               Leadership
             </span>
           </div>
-
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-            Organizing <span className="gradient-text">Committee</span>
-          </h2>
         </motion.div>
 
-        {/* Top Row - Patrons, Convenor */}
+        {/* Patrons */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-16"
         >
-          <div className="flex flex-wrap justify-center items-start gap-8 sm:gap-12 lg:gap-16">
-            {/* Chief Guest */}
-            {/* <div className="flex flex-col items-center">
-              <div className="text-xs font-semibold text-yellow-500 uppercase tracking-wider mb-4 px-3 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/30">
-                Chief Guest
-              </div>
-              <MemberCard
-                name={chiefGuest.name}
-                title={chiefGuest.title}
-                affiliation={chiefGuest.affiliation}
-                image={chiefGuest.image}
-                size="large"
-              />
-            </div> */}
-
-            {/* Patrons */}
-            {patrons.map((patron, index) => (
-              <div key={patron.name} className="flex flex-col items-center">
-                <div className="text-xs font-semibold text-primary uppercase tracking-wider mb-4 px-3 py-1 rounded-full bg-primary/10 border border-primary/30">
-                  Patron
-                </div>
-                <MemberCard
-                  name={patron.name}
-                  title={patron.title}
-                  affiliation={patron.affiliation}
-                  image={patron.image}
-                  size="large"
-                />
-              </div>
-            ))}
-
-            {/* Convenor */}
-            <div className="flex flex-col items-center">
-              <div className="text-xs font-semibold text-accent uppercase tracking-wider mb-4 px-3 py-1 rounded-full bg-accent/10 border border-accent/30">
-                Convenor
-              </div>
-              <MemberCard
-                name={convenor.name}
-                title={convenor.title}
-                affiliation={convenor.affiliation}
-                image={convenor.image}
-                size="large"
-              />
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary uppercase tracking-wider px-4 py-2 rounded-full bg-primary/10 border border-primary/30">
+              <Award className="w-4 h-4" />
+              Chief Patrons
             </div>
+          </div>
+
+          <div className="flex flex-wrap justify-center items-start gap-8 sm:gap-12">
+            {patrons.map((patron) => (
+              <MemberCard
+                key={patron.name}
+                name={patron.name}
+                title={patron.title}
+                affiliation={patron.affiliation}
+                image={patron.image}
+                size="large"
+              />
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Convenor */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mb-16"
+        >
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center gap-2 text-sm font-semibold text-accent uppercase tracking-wider px-4 py-2 rounded-full bg-accent/10 border border-accent/30">
+              <Award className="w-4 h-4" />
+              Convenor
+            </div>
+          </div>
+
+          <div className="flex flex-wrap justify-center items-start gap-8 sm:gap-12">
+             {convenor.map((convenor) => (
+               <MemberCard
+              name={convenor.name}
+              title={convenor.title}
+              affiliation={convenor.affiliation}
+              image={convenor.image}
+              size="large"
+            />
+            ))}
+           
           </div>
         </motion.div>
 

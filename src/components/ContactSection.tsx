@@ -1,21 +1,22 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Mail, Send } from "lucide-react";
+import { Mail, Phone, Send } from "lucide-react";
 
 const contacts = [
-  {
-    name: "Dr. Jignesh Bhatt",
-    email: "jignesh.bhatt@iiitvadodara.ac.in",
-  },
+  // {
+  //   name: "Dr. Jignesh Bhatt",
+  //   email: "jignesh.bhatt@iiitvadodara.ac.in",
+  // },
   {
     name: "Dr. Sanjay Saxena",
-    email: "sanjay_saxena@iiitvadodara.ac.in",
+    email: "genai_kshala2026@iiitvadodara.ac.in",
+    phone:"+91 9839677691"
   },
-  {
-    name: "Dr. Pramit Mazumdar",
-    email: "pramit.mazumdar@iiitvadodara.ac.in",
-  },
+  // {
+  //   name: "Dr. Pramit Mazumdar",
+  //   email: "pramit.mazumdar@iiitvadodara.ac.in",
+  // },
 ];
 
 const ContactSection = () => {
@@ -58,7 +59,7 @@ const ContactSection = () => {
           {contacts.map((contact, index) => (
             <motion.a
               key={contact.email}
-              href={`mailto:${contact.email}`}
+
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
@@ -72,9 +73,12 @@ const ContactSection = () => {
                   <h4 className="font-display font-semibold text-foreground mb-1">
                     {contact.name}
                   </h4>
-                  <p className="text-sm text-primary break-all group-hover:underline">
+                  <a href={`mailto:${contact.email}`} className="text-sm text-primary break-all hover:underline">
                     {contact.email}
-                  </p>
+                  </a>
+                   <a href={`tel:${contact.phone}`} className="text-sm text-primary/90 break-all mt-3 block hover:underline">
+                    {contact.phone}
+                  </a>
                 </div>
                 <Send className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
               </div>
