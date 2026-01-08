@@ -232,12 +232,12 @@ const HeroSection = () => {
             </div>
             <div className="glass-card p-5 text-center group hover:border-primary/40 transition-all duration-300">
               <BookOpen className="w-6 h-6 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
-              <div className="text-3xl font-bold font-display gradient-text">10</div>
+              <div className="text-3xl font-bold font-display gradient-text">9</div>
               <div className="text-sm text-muted-foreground">Lecture Hours</div>
             </div>
             <div className="glass-card p-5 text-center group hover:border-primary/40 transition-all duration-300">
               <Brain className="w-6 h-6 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
-              <div className="text-3xl font-bold font-display gradient-text">9</div>
+              <div className="text-3xl font-bold font-display gradient-text">6</div>
               <div className="text-sm text-muted-foreground">Hands-on Hours</div>
             </div>
           </motion.div>
