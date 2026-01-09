@@ -21,12 +21,12 @@ const speakers = [
     isKeynote: false,
     image: "/organising/sanjay.png", // Replace with: "/speakers/sanjay-saxena.jpg" or import
   },
-  // {
-  //   name: "Dr. Pramit Mazumdar",
-  //   affiliation: "Indian Institute of Information Technology, Vadodara, India",
-  //   isKeynote: false,
-  //   image:"/organising/pramit.png"
-  // },
+  {
+    name: "R. Venkatesh Babu",
+    affiliation: " Indian Institute of Science (IISc), Bangalore, India",
+    isKeynote: true,
+    image:"/organising/VenkateshBabu.png"
+  },
    {
     name: "Prof. Uttama Lahiri",
     affiliation: "Indian Institute of Technology, Gandhinagar, India",
