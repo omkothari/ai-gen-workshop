@@ -27,11 +27,23 @@ const speakers = [
     isKeynote: true,
     image:"/organising/VenkateshBabu.png"
   },
-   {
-    name: "Prof. Uttama Lahiri",
-    affiliation: "Indian Institute of Technology, Gandhinagar, India",
+  //  {
+  //   name: "Prof. Uttama Lahiri",
+  //   affiliation: "Indian Institute of Technology, Gandhinagar, India",
+  //   isKeynote: true,
+  //   image: "/prof-uttama.jpeg",
+  // },
+  {
+    name: "Mr. Samir J. Bhatt",
+    affiliation: "e-Infochips, Ahemdabad, India",
     isKeynote: true,
-    image: "/prof-uttama.jpeg",
+    image: null,
+  },
+   {
+    name: "Prof. Manjunath V. Joshi",
+    affiliation: "DAU, Gandhinagar, India",
+    isKeynote: true,
+    image: null,
   },
   {
     name: "Dr. Prateek Prasanna",
@@ -136,7 +148,7 @@ const SpeakersSection = () => {
                 </div>
 
                 {/* Avatar */}
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-yellow-500/20 to-amber-500/20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform overflow-hidden">
+                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-yellow-500/20 to-amber-500/20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform overflow-hidden">
                   {speaker.image ? (
                     <img 
                       src={speaker.image} 
@@ -177,7 +189,7 @@ const SpeakersSection = () => {
                 className="glass-card p-4 group hover:border-primary/30 transition-all duration-300"
               >
                 {/* Avatar */}
-                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform overflow-hidden">
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform overflow-hidden">
                   {speaker.image ? (
                     <img 
                       src={speaker.image} 

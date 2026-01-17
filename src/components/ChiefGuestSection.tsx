@@ -5,10 +5,10 @@ import { Star } from "lucide-react";
 
 const chiefGuest = {
   role: "Chief Guest",
-  name: "XXX",
-  title: "XXX",
-  affiliation: "XXX",
-  image: null as string | null,
+  name: "Prof. K. P. Singh",
+  // title: "XXX",
+  // affiliation: "XXX",
+  image: "/chiefguest.png",
 };
 
 const ChiefGuestSection = () => {
@@ -59,12 +59,12 @@ const ChiefGuestSection = () => {
             <h3 className="font-display font-bold text-xl sm:text-2xl text-foreground mb-1">
               {chiefGuest.name}
             </h3>
-            <p className="text-base sm:text-lg text-yellow-500 font-medium mb-1">
+            {/* <p className="text-base sm:text-lg text-yellow-500 font-medium mb-1">
               {chiefGuest.title}
             </p>
             <p className="text-sm sm:text-base text-muted-foreground">
               {chiefGuest.affiliation}
-            </p>
+            </p> */}
           </motion.div>
         </motion.div>
       </div>
