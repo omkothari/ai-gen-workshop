@@ -22,13 +22,13 @@ const Index = () => {
       <HeroSection />
       <AboutSection />
       <ObjectivesSection />
-      <AudienceSection />
-      <OutcomesSection />
-      <ScheduleSection />
+      {/* <AudienceSection /> */}
+      {/* <OutcomesSection /> */}
+      {/* <ScheduleSection /> */}
       <PedagogySection />
-      <ImpactSection />
-      <SpeakersSection />
+      {/* <ImpactSection /> */}
       <ChiefGuestSection />
+      <SpeakersSection />
       <OrganizingSection />
       <VenueSection />
       <ConclusionSection />

@@ -27,12 +27,12 @@ const speakers = [
     isKeynote: true,
     image:"/organising/VenkateshBabu.png"
   },
-  //  {
-  //   name: "Prof. Uttama Lahiri",
-  //   affiliation: "Indian Institute of Technology, Gandhinagar, India",
-  //   isKeynote: true,
-  //   image: "/prof-uttama.jpeg",
-  // },
+   {
+    name: "Shanmuganathan Raman",
+    affiliation: "Indian Institute of Technology, Gandhinagar, India",
+    isKeynote: true,
+    image: "/ShanmuganathanRaman.png",
+  },
   {
     name: "Mr. Samir J. Bhatt",
     affiliation: "e-Infochips, Ahemdabad, India",
@@ -43,7 +43,7 @@ const speakers = [
     name: "Prof. Manjunath V. Joshi",
     affiliation: "DAU, Gandhinagar, India",
     isKeynote: true,
-    image: null,
+    image: "/manjunath.jpeg",
   },
   {
     name: "Dr. Prateek Prasanna",
