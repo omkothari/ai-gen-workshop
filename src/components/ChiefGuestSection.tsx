@@ -8,7 +8,7 @@ const chiefGuest = {
   name: "Prof. K. P. Singh",
   title: "Former Director IIT BHU",
   affiliation: "Varanasi",
-  image: "/chiefguest.png",
+  image: null,
 };
 
 const ChiefGuestSection = () => {
