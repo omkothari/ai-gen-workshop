@@ -169,10 +169,9 @@ const OrganizingSection = () => {
 
           <div className="flex flex-wrap justify-center items-start gap-8 sm:gap-12">
              {convenor.map((convenor) => (
-               <MemberCard
+              <MemberCard
               name={convenor.name}
-              title={convenor.title}
-              affiliation={convenor.affiliation}
+               affiliation={convenor.affiliation}
               image={convenor.image}
               size="large"
             />
