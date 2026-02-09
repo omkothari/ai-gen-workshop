@@ -140,6 +140,25 @@ const HeroSection = () => {
             ANRF-PAIR Sponsored
           </motion.p>
 
+          {/* Mobile logos above heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.25 }}
+            className="flex sm:hidden items-center justify-center gap-4 mb-4"
+          >
+            <div className="w-20 h-20 glass-card rounded-xl flex items-center justify-center p-2">
+              <div className="w-full h-full bg-white rounded-lg flex items-center justify-center overflow-hidden">
+                <img src="/indiaai.jpeg" className="h-full w-full object-contain p-1" alt="INDIAai" />
+              </div>
+            </div>
+            <div className="w-20 h-20 glass-card rounded-xl flex items-center justify-center p-2">
+              <div className="w-full h-full bg-white rounded-lg flex items-center justify-center overflow-hidden">
+                <img src="/ai-impact-summit.jpeg" className="h-full w-full object-contain p-1" alt="AI Impact Summit" />
+              </div>
+            </div>
+          </motion.div>
+
           {/* Main Title with flanking logos */}
           <div className="flex items-center justify-center gap-4 sm:gap-6 md:gap-8 mb-6">
             <motion.div
