@@ -140,19 +140,43 @@ const HeroSection = () => {
             ANRF-PAIR Sponsored
           </motion.p>
 
-          {/* Main Title */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
-          >
-            <span className="text-foreground">Karyashala on</span>
-            <br />
-            <span className="gradient-text">Large Language Models</span>
-            <br />
-            <span className="text-foreground">& Generative AI (Gen-AI Health)</span>
-          </motion.h1>
+          {/* Main Title with flanking logos */}
+          <div className="flex items-center justify-center gap-4 sm:gap-6 md:gap-8 mb-6">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="hidden sm:flex shrink-0 w-20 h-20 md:w-28 md:h-28 lg:w-32 lg:h-32 glass-card rounded-xl items-center justify-center p-2"
+            >
+              <div className="w-full h-full bg-white rounded-lg flex items-center justify-center overflow-hidden">
+                <img src="/indiaai.jpeg" className="h-full w-full object-contain p-1" alt="INDIAai" />
+              </div>
+            </motion.div>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight"
+            >
+              <span className="text-foreground">Karyashala on</span>
+              <br />
+              <span className="gradient-text">Large Language Models</span>
+              <br />
+              <span className="text-foreground">& Generative AI (Gen-AI Health)</span>
+            </motion.h1>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="hidden sm:flex shrink-0 w-20 h-20 md:w-28 md:h-28 lg:w-32 lg:h-32 glass-card rounded-xl items-center justify-center p-2"
+            >
+              <div className="w-full h-full bg-white rounded-lg flex items-center justify-center overflow-hidden">
+                <img src="/ai-impact-summit.jpeg" className="h-full w-full object-contain p-1" alt="AI Impact Summit" />
+              </div>
+            </motion.div>
+          </div>
 
           {/* Subtitle */}
           <motion.p
