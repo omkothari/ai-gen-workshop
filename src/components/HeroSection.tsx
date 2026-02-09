@@ -121,7 +121,7 @@ const HeroSection = () => {
           </motion.div>
 
           {/* Date section with flanking logos on tablet/desktop */}
-          <div className="flex items-center justify-center gap-4 md:gap-8 mb-6">
+          <div className="flex items-center justify-center gap-8 md:gap-14 lg:gap-16 mb-6">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
