@@ -120,25 +120,51 @@ const HeroSection = () => {
             </div>
           </motion.div>
 
-          {/* Badge with Workshop Dates */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 border border-primary/30 mb-6"
-          >
-            <Calendar className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-muted-foreground text-primary/90">
-              {WORKSHOP_START} – {WORKSHOP_END}
-            </span>
-          </motion.div>
+          {/* Date section with flanking logos on tablet/desktop */}
+          <div className="flex items-center justify-center gap-4 md:gap-8 mb-6">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="hidden sm:flex shrink-0 w-24 h-24 md:w-36 md:h-36 lg:w-40 lg:h-40 glass-card rounded-xl items-center justify-center p-2"
+            >
+              <div className="w-full h-full bg-white rounded-lg flex items-center justify-center overflow-hidden">
+                <img src="/indiaai.jpeg" className="h-full w-full object-contain p-1" alt="INDIAai" />
+              </div>
+            </motion.div>
 
-          <motion.p  initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-6">
-            ANRF-PAIR Sponsored
-          </motion.p>
+            <div className="flex flex-col items-center">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 border border-primary/30 mb-4"
+              >
+                <Calendar className="w-4 h-4 text-primary" />
+                <span className="text-sm font-medium text-muted-foreground text-primary/90">
+                  {WORKSHOP_START} – {WORKSHOP_END}
+                </span>
+              </motion.div>
+
+              <motion.p initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="text-lg sm:text-xl text-muted-foreground">
+                ANRF-PAIR Sponsored
+              </motion.p>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="hidden sm:flex shrink-0 w-24 h-24 md:w-36 md:h-36 lg:w-40 lg:h-40 glass-card rounded-xl items-center justify-center p-2"
+            >
+              <div className="w-full h-full bg-white rounded-lg flex items-center justify-center overflow-hidden">
+                <img src="/ai-impact-summit.jpeg" className="h-full w-full object-contain p-1" alt="AI Impact Summit" />
+              </div>
+            </motion.div>
+          </div>
 
           {/* Mobile logos above heading */}
           <motion.div
@@ -159,43 +185,19 @@ const HeroSection = () => {
             </div>
           </motion.div>
 
-          {/* Main Title with flanking logos */}
-          <div className="flex items-center justify-center gap-4 sm:gap-6 md:gap-8 mb-6">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="hidden sm:flex shrink-0 w-20 h-20 md:w-28 md:h-28 lg:w-32 lg:h-32 glass-card rounded-xl items-center justify-center p-2"
-            >
-              <div className="w-full h-full bg-white rounded-lg flex items-center justify-center overflow-hidden">
-                <img src="/indiaai.jpeg" className="h-full w-full object-contain p-1" alt="INDIAai" />
-              </div>
-            </motion.div>
-
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight"
-            >
-              <span className="text-foreground">Karyashala on</span>
-              <br />
-              <span className="gradient-text">Large Language Models</span>
-              <br />
-              <span className="text-foreground">& Generative AI (Gen-AI Health)</span>
-            </motion.h1>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="hidden sm:flex shrink-0 w-20 h-20 md:w-28 md:h-28 lg:w-32 lg:h-32 glass-card rounded-xl items-center justify-center p-2"
-            >
-              <div className="w-full h-full bg-white rounded-lg flex items-center justify-center overflow-hidden">
-                <img src="/ai-impact-summit.jpeg" className="h-full w-full object-contain p-1" alt="AI Impact Summit" />
-              </div>
-            </motion.div>
-          </div>
+          {/* Main Title */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
+          >
+            <span className="text-foreground">Karyashala on</span>
+            <br />
+            <span className="gradient-text">Large Language Models</span>
+            <br />
+            <span className="text-foreground">& Generative AI (Gen-AI Health)</span>
+          </motion.h1>
 
           {/* Subtitle */}
           <motion.p
